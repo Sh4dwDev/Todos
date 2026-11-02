@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+
+    <!-- daisyUI + Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+    <link rel="stylesheet" href="styles/index.css">
+
+</head>
+<body class="min-h-screen bg-base-100 p-8">
+    
+    <h1 class="text-3xl font-bold mb-6">My Board</h1>
+
+    <!-- Add card -->
+    <div class="flex gap-2 mb-8">
+        <input id="card-input" type="text" placeholder="New card..." class="input input-bordered w-64">
+        <button id="add-btn" class="btn btn-primary">Add</button>
+    </div>
+
+    <!-- Columns -->
+    <div class="flex gap-6 items-stretch min-h-[70vh]">
+        <div id="todo" class="bg-base-200 rounded-box p-4 w-72 flex flex-col">
+            <h2 class="font-bold text-lg mb-4">To do</h2>
+        </div>
+
+        <div id="doing" class="bg-base-200 rounded-box p-4 w-72 flex flex-col">
+            <h2 class="font-bold text-lg mb-4">Doing</h2>
+        </div>
+
+        <div id="done" class="bg-base-200 rounded-box p-4 w-72 flex flex-col">
+            <h2 class="font-bold text-lg mb-4">Done</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
